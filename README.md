@@ -9,10 +9,15 @@ Just a simple Go Http Server for the showcase
 ###1 - setup gopath
 First, set your Gopath
 ‘export GOPATH=/opt/workspace/web/HelloBeerGo/‘
-###1 - Start the project locally
+###2
+Init environment variables
+dbHost : url/ip to this db
+dbPwd : password to the db
+
+###3 - Start the project locally
     ‘$ sh bin/deps.sh
     $ sh bin/run.sh‘
 
 
-###2 - Html pages
+###4 - Html pages
 --> goes in src/pages
