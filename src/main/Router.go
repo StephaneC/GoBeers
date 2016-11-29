@@ -4,7 +4,7 @@ import (
 	"github.com/gorilla/mux"
 	"net/http"
 	"log"
-    "flag"
+  "flag"
 )
 
 type Route struct {
@@ -18,7 +18,9 @@ type Routes []Route
 
 var routes = Routes{
 	Route{"Ping", "GET", "/ping", PingHandler},
-    Route{"IdHandler", "GET", "/id/{id}", IdHandler},
+  Route{"IdHandler", "GET", "/id/{id}", IdHandler},
+	Route{"AddBeer", "POST", "/beers", AddBeer},
+	Route{"GetBeer", "GET", "/beers", GetBeers},
 }
 
 func NewRouter() *mux.Router {
@@ -26,7 +28,7 @@ func NewRouter() *mux.Router {
     flag.StringVar(&dir, "dir", "./src/pages/", "./src/pages/")
     flag.Parse()
     log.Printf(dir)
-    
+
 	router := mux.NewRouter().StrictSlash(true)
 	for _, route := range routes {
 		log.Printf("routing : " + route.Pattern)

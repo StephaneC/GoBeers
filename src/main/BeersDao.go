@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"os"
+	//"os"
 	"encoding/json"
   "gopkg.in/mgo.v2"
   "gopkg.in/mgo.v2/bson"
